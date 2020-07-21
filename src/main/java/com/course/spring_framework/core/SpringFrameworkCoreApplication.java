@@ -1,13 +1,18 @@
 package com.course.spring_framework.core;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@SpringBootApplication
+import java.util.Arrays;
+
 public class SpringFrameworkCoreApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringFrameworkCoreApplication.class, args);
+        ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
+
+        BookService bookService = (BookService) context.getBean("bookService");
+        System.out.println(bookService.getBookRepository() != null);
     }
 
 }
