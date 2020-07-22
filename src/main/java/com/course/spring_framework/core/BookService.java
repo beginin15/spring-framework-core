@@ -10,4 +10,8 @@ public class BookService {
     public BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
+
+    public void pringBookRepository() {
+        System.out.println(bookRepository);
+    }
 }
