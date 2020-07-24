@@ -14,16 +14,10 @@ public class TestRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("Prototype");
+        System.out.println("proto by single");
 
-        System.out.println(context.getBean(Proto.class));
-        System.out.println(context.getBean(Proto.class));
-        System.out.println(context.getBean(Proto.class));
-
-        System.out.println("Single");
-
-        System.out.println(context.getBean(Single.class));
-        System.out.println(context.getBean(Single.class));
-        System.out.println(context.getBean(Single.class));
+        System.out.println(context.getBean(Single.class).getProto());
+        System.out.println(context.getBean(Single.class).getProto());
+        System.out.println(context.getBean(Single.class).getProto());
     }
 }
