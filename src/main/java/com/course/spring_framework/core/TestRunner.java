@@ -18,7 +18,7 @@ public class TestRunner implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         while (true) {
             System.out.println(messageSource.getMessage("greeting", new String[] {"jay"}, Locale.KOREA));
-            System.out.println(messageSource.getMessage("greeting", new String[] {"jay"}, Locale.getDefault()));
+            System.out.println(messageSource.getMessage("greeting", new String[] {"jay"}, Locale.ENGLISH));
             Thread.sleep(1000L);
         }
     }
