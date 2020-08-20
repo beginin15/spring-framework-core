@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @ExtendWith(SpringExtension.class)
 @WebMvcTest({
         EventController.class,
-        EventFormatter.class})
+        EventConverter.StringToEventConverter.class})
 class EventControllerTest {
 
     @Autowired
