@@ -9,6 +9,11 @@ public class Event {
         this.id = id;
     }
 
+    public Event(Integer id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
     public Integer getId() {
         return id;
     }
