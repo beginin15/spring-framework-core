@@ -11,11 +11,21 @@ public class TestRunner implements ApplicationRunner {
     @Value("#{1 + 1}")
     int value;
 
+    @Value("#{1 eq 1}")
+    boolean trueOrFalse;
+
+
     @Value("#{'hello ' + 'world'}")
     String greeting;
 
     @Value("hello")
     String hello;
+
+    @Value("${my.value}")
+    int myValue;
+
+    @Value("#{${my.value} eq 100}")
+    boolean isMyValue100;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -23,5 +33,7 @@ public class TestRunner implements ApplicationRunner {
         System.out.println(value);
         System.out.println(greeting);
         System.out.println(hello);
+        System.out.println(myValue);
+        System.out.println(isMyValue100);
     }
 }
