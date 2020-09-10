@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class PerfAspect {
 
-    @Around("@annotation(PerfLogging)")
+    @Around("bean(simpleEventService)")
     public Object logPerf(ProceedingJoinPoint pjp) throws Throwable {
         long begin = System.currentTimeMillis();
         Object retVal = pjp.proceed();
